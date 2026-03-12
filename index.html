@@ -1,459 +1,598 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaspar Astorga</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gaspar Astorga — AI &amp; Data Professional</title>
+    <meta name="description"
+        content="Gaspar Astorga — AI strategist and data professional specialising in AI governance, machine learning, and digital transformation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">GA<span class="accent">.</span></a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+    <!-- ── Navigation ───────────────────────────────────── -->
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="logo" aria-label="Gaspar Astorga — back to top">GA.</a>
+            <div class="nav-right">
+                <ul class="nav-links" role="list">
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                    <li><a href="#education" data-i18n="nav_education">Education</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        width="16" height="16" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        width="16" height="16" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button class="nav-hamburger" id="navToggle" aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Gaspar Astorga</h1>
-                <p class="hero-tagline">AI & Data Enthusiast<span class="accent"> | </span>Digital Transformation
-                    Advocate<span class="accent"> | </span>Problem Solver</p>
-                <p class="hero-description">
-                    Passionate about leveraging artificial intelligence and data analytics to drive meaningful change.
-                    I thrive at the intersection of technology and business, turning complex challenges into elegant
-                    solutions.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="Gaspar_Antonio_Astorga_Palma_CV.pdf" class="btn btn-secondary" download>Download CV</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <pre><code><span class="keyword">const</span> <span class="variable">gaspar</span> = {
-  <span class="property">passion</span>: <span class="string">"AI & Data"</span>,
-  <span class="property">mission</span>: <span class="string">"Transform ideas into impact"</span>,
-  <span class="property">languages</span>: [<span class="string">"ES"</span>, <span class="string">"EN"</span>, <span class="string">"DE"</span>, <span class="string">"FR"</span>],
-  <span class="property">status</span>: <span class="string">"Always learning"</span>
-};</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a strategic digitalization professional with a deep passion for AI-driven transformation
-                        and data analytics. Currently orchestrating AI governance and strategic initiatives at
-                        <strong>ŠKODA AUTO</strong>, I combine technical expertise with business acumen to deliver
-                        measurable impact.
-                    </p>
-                    <p>
-                        With a Master's in Business Intelligence and a distinguished academic background (graduated
-                        top of my class in Business Administration), I approach every challenge with curiosity
-                        and analytical rigor.
-                    </p>
-                    <p>
-                        Beyond the professional realm, I'm driven by continuous learning, exploring new technologies,
-                        staying active through sports, and discovering new cultures through travel.
-                    </p>
-                </div>
-                <div class="about-interests">
-                    <h3>What Drives Me</h3>
-                    <div class="interest-tags">
-                        <span class="tag"><span class="tag-icon">🤖</span> AI & Machine Learning</span>
-                        <span class="tag"><span class="tag-icon">📊</span> Data Analytics</span>
-                        <span class="tag"><span class="tag-icon">📚</span> Continuous Learning</span>
-                        <span class="tag"><span class="tag-icon">🏃</span> Sports & Fitness</span>
-                        <span class="tag"><span class="tag-icon">✈️</span> Travel & Culture</span>
-                        <span class="tag"><span class="tag-icon">🌍</span> Languages</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Programming</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag advanced">Python</span>
-                        <span class="skill-tag advanced">R</span>
-                        <span class="skill-tag advanced">SQL</span>
-                        <span class="skill-tag proficient">Bash</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                            </path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3>Data & Analytics</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Databricks</span>
-                        <span class="skill-tag">SQL Server</span>
-                        <span class="skill-tag">Statistical Modeling</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
-                            <path d="M12 2a10 10 0 0 1 10 10"></path>
-                            <circle cx="12" cy="12" r="6"></circle>
-                            <circle cx="12" cy="12" r="2"></circle>
-                        </svg>
-                    </div>
-                    <h3>AI & Machine Learning</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">LangGraph</span>
-                        <span class="skill-tag">AI Governance</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3>Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag advanced">Spanish (Native)</span>
-                        <span class="skill-tag advanced">English (C1)</span>
-                        <span class="skill-tag proficient">German (B2/C1)</span>
-                        <span class="skill-tag">French (B1)</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3>Methodologies</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Digital Transformation</span>
-                        <span class="skill-tag">Change Management</span>
-                        <span class="skill-tag">Data Stewardship</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Microsoft 365</span>
-                        <span class="skill-tag">SharePoint</span>
-                        <span class="skill-tag">Advanced Excel</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="work" class="work">
-        <div class="section-header">
-            <span class="section-tag">Experience</span>
-            <h2>Where I've worked</h2>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>AI Business Partner - Finance & Legal</h3>
-                        <span class="timeline-date">Jan 2026 - Present</span>
-                    </div>
-                    <p class="timeline-company">ŠKODA AUTO | Mladá Boleslav, Czechia</p>
-                    <ul class="timeline-details">
-                        <li>Define and execute comprehensive AI strategy for Finance and Legal functions</li>
-                        <li>Lead cross-functional AI initiatives from ideation through deployment</li>
-                        <li>Architect organizational AI governance frameworks covering EU AI Act compliance</li>
-                        <li>Orchestrate foundational AI projects driving automation of complex workflows</li>
-                    </ul>
-                </div>
-                </article>
-                <article class="role slide-up">
-                    <div class="role-marker"></div>
-                    <div class="role-content">
-                        <div class="role-header">
-                            <div>
-                                <h3>Business Trainee</h3>
-                                <p class="company">ŠKODA AUTO</p>
-                            </div>
-                            <span class="date">2024 — 2025</span>
-                        </div>
-                        <p class="timeline-company">ŠKODA AUTO | Mladá Boleslav, Czechia</p>
-                        <ul class="timeline-details">
-                            <li>Delivered AI-powered solutions for production optimization</li>
-                            <li>Led external consulting teams in defining AI strategic architecture</li>
-                            <li>Assessed VW Group IT project portfolio (multi-million EUR budget)</li>
-                            <li>Managed data mapping initiatives as Data Steward</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="role slide-up">
-                    <div class="role-marker"></div>
-                    <div class="role-content">
-                        <div class="role-header">
-                            <div>
-                                <h3>Financial Auditor</h3>
-                                <p class="company">KPMG</p>
-                            </div>
-                            <span class="date">2023 — 2024</span>
-                        </div>
-                        <p class="timeline-company">KPMG | Málaga, Spain</p>
-                        <ul class="timeline-details">
-                            <li>Identified critical account errors, preventing legal exposure for multinational clients
-                            </li>
-                            <li>Conducted comprehensive financial analysis and verification reports</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="role slide-up">
-                    <div class="role-marker"></div>
-                    <div class="role-content">
-                        <div class="role-header">
-                            <div>
-                                <h3>Consulting Intern, Risk</h3>
-                                <p class="company">Ernst & Young</p>
-                            </div>
-                            <span class="date">2023</span>
-                        </div>
-                        <p class="timeline-company">Ernst & Young | Málaga, Spain</p>
-                        <ul class="timeline-details">
-                            <li>Analyzed reputational and financial risks for banking sector clients</li>
-                            <li>Developed comprehensive risk assessment frameworks for technology providers</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-    </section>
-
-    <section class="education">
-        <div class="section-header">
-            <span class="section-tag">Education</span>
-            <h2>Academic background</h2>
-        </div>
-        <div class="edu-grid">
-            <article class="edu-card slide-up">
-                <span class="edu-year">2024 — 2025</span>
-                <h3>Master in Business Intelligence</h3>
-                <p class="school">International University of La Rioja</p>
-            </article>
-            <article class="edu-card highlight slide-up">
-                <div class="edu-badge">Top Graduate</div>
-                <span class="edu-year">2019 — 2023</span>
-                <h3>Bachelor of Business Administration</h3>
-                <p class="education-school">University of Málaga</p>
-                <p class="education-date">2019 - 2023</p>
-                <p class="education-details">
-                    <strong>Extraordinary Award:</strong> Best graduate 2019-2023<br>
-                    <strong>Gauss Award:</strong> Highest performance in Statistics & Econometrics
-                </p>
-        </div>
-        <div class="education-card">
-            <div class="education-icon">🌍</div>
-            <h3>Erasmus Exchange</h3>
-            <p class="education-school">University of Regensburg, Germany</p>
-            <p class="education-date">2022 - 2023</p>
-            <p class="education-details">Corporate Sustainability, Business Psychology, European Economy</p>
-        </div>
-        </div>
-        <div class="certifications">
-            <h3>Certifications</h3>
-            <div class="cert-list">
-                <div class="cert-item">
-                    <span class="cert-status in-progress">In Progress</span>
-                    <span class="cert-name">AI Product Manager Professional Certificate - Microsoft</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-status completed">2024</span>
-                    <span class="cert-name">AI Python for Beginners - DeepLearning.ai</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-status completed">2024</span>
-                    <span class="cert-name">AI Agents in LangGraph - DeepLearning.ai</span>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-intro">
-                I'm always open to discussing new opportunities, interesting projects,
-                or just having a conversation about AI and technology.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:gasparastorga13@gmail.com" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <span class="contact-label">Email</span>
-                    <span class="contact-value">gasparastorga13@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/gaspar-antonio-astorga-palma/" target="_blank" rel="noopener"
-                    class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </div>
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-value">Connect with me</span>
-                </a>
-                <a href="https://github.com/gaaprojects" target="_blank" rel="noopener" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>
-                    </div>
-                    <span class="contact-label">GitHub</span>
-                    <span class="contact-value">@gaaprojects</span>
-                </a>
-            </div>
-            <div class="contact-location">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
+    <!-- Mobile menu (outside nav for stacking context) -->
+    <div class="nav-backdrop" id="navBackdrop"></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+        <ul role="list">
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="#education" data-i18n="nav_education">Education</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Toggle colour theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                    height="18" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
                 </svg>
-                <span>Mladá Boleslav, Czechia</span>
-            </div>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                    height="18" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+                <span data-i18n="toggle_theme">Toggle theme</span>
+            </button>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Gaspar Astorga. Built with passion and code.</p>
+    <main>
+
+        <!-- ── Hero ─────────────────────────────────────── -->
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="hero-meta">
+                <span class="hero-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"
+                        aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span data-i18n="hero_location">Mladá Boleslav, Czechia</span>
+                </span>
+                <span class="hero-status" role="status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span data-i18n="hero_status">Open to new connections</span>
+                </span>
+            </div>
+            <h1 class="hero-name">Gaspar<br>Astorga</h1>
+            <p class="hero-role" data-i18n="hero_role">AI Business Partner &amp; Data Professional</p>
+            <p class="hero-bio" data-i18n="hero_bio">
+                I build AI strategy and data solutions at the intersection of technology and business.
+                Currently leading AI governance and automation at ŠKODA AUTO in Finance and Legal— turning complex
+                challenges into measurable impact.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary" data-i18n="hero_cta_contact">Get in touch</a>
+                <a href="Gaspar_Astorga_CV.pdf" class="btn-secondary" download>
+                    <span data-i18n="hero_cta_cv">Download CV</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
+                        aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-langs" aria-label="Languages — click to change site language" role="group">
+                <button class="lang-chip active" data-lang="en" aria-pressed="true">EN</button>
+                <button class="lang-chip" data-lang="es" aria-pressed="false">ES</button>
+                <button class="lang-chip" data-lang="de" aria-pressed="false">DE</button>
+            </div>
+        </section>
+
+        <!-- ── About ─────────────────────────────────────── -->
+        <section id="about" class="section">
+            <div class="section-label" data-i18n="about_label">About</div>
+            <div class="about-grid">
+                <div class="about-text animate">
+                    <h2 data-i18n-html="about_heading">Strategic technologist<br>with a technical core</h2>
+                    <p data-i18n="about_p1">I bridge the gap between engineering rigour and business strategy. With a
+                        background spanning financial auditing, enterprise consulting, and AI product development, I
+                        bring end-to-end perspective to complex problems.</p>
+                    <p data-i18n="about_p2">At ŠKODA AUTO I define and execute AI strategy for Finance and Legal — from
+                        ideation through deployment — while architecting governance frameworks for EU AI Act compliance.
+                        Before that, I sharpened my analytical edge at KPMG and EY.</p>
+                    <p data-i18n="about_p3">I graduated top of my class in Business Administration and hold a Master in
+                        Business Intelligence. My technical stack includes Python, R, SQL, and LangGraph — tools I use
+                        to create real outcomes, not for their own sake.</p>
+                </div>
+                <div class="about-cards animate-stagger">
+                    <div class="info-card">
+                        <span class="info-label" data-i18n="card_role_label">Current role</span>
+                        <p data-i18n-html="card_role_value">AI Business Partner<br>Finance &amp; Legal</p>
+                        <span class="info-sub">ŠKODA AUTO</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label" data-i18n="card_edu_label">Education</span>
+                        <p data-i18n="card_edu_value">MSc Business Intelligence</p>
+                        <span class="info-sub" data-i18n="card_edu_sub">UNIR · Top Graduate UMA</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label" data-i18n="card_lang_label">Languages</span>
+                        <p data-i18n="card_lang_value">ES · EN · DE</p>
+                        <span class="info-sub" data-i18n="card_lang_sub">Native · C1 · B2/C1</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label" data-i18n="card_focus_label">Focus areas</span>
+                        <p data-i18n="card_focus_value">AI Governance · ML Engineering · Data Analytics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Experience ────────────────────────────────── -->
+        <section id="experience" class="section">
+            <div class="section-label" data-i18n="exp_label">Experience</div>
+            <h2 class="section-title" data-i18n="exp_title">Where I've worked</h2>
+            <ol class="timeline" role="list">
+                <li class="timeline-item animate">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 data-i18n="job1_title">AI Business Partner — Finance &amp; Legal</h3>
+                                <span class="timeline-company" data-i18n="job1_company">ŠKODA AUTO · Mladá Boleslav,
+                                    Czechia</span>
+                            </div>
+                            <time class="timeline-date" datetime="2026-01" data-i18n="job1_date">Jan 2026 —
+                                Present</time>
+                        </div>
+                        <ul class="timeline-details">
+                            <li data-i18n="job1_li1">Define and execute comprehensive AI strategy for Finance and Legal
+                                functions</li>
+                            <li data-i18n="job1_li2">Lead cross-functional AI initiatives from ideation through
+                                deployment</li>
+                            <li data-i18n="job1_li3">Architect organisational AI governance frameworks covering EU AI
+                                Act compliance</li>
+                            <li data-i18n="job1_li4">Drive automation of complex financial and legal workflows</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item animate">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 data-i18n="job2_title">Business Trainee — AI &amp; Digitalization</h3>
+                                <span class="timeline-company" data-i18n="job2_company">ŠKODA AUTO · Mladá Boleslav,
+                                    Czechia</span>
+                            </div>
+                            <time class="timeline-date" datetime="2024-09" data-i18n="job2_date">Sept 2024 — Dec
+                                2025</time>
+                        </div>
+                        <ul class="timeline-details">
+                            <li data-i18n="job2_li1">Delivered AI-powered solutions for production optimisation</li>
+                            <li data-i18n="job2_li2">Led external consulting teams in defining AI strategic architecture
+                            </li>
+                            <li data-i18n="job2_li3">Assessed VW Group IT project portfolio (multi-million EUR budget)
+                            </li>
+                            <li data-i18n="job2_li4">Managed data mapping initiatives as Data Steward</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item animate">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 data-i18n="job3_title">Financial Auditor</h3>
+                                <span class="timeline-company" data-i18n="job3_company">KPMG · Málaga, Spain</span>
+                            </div>
+                            <time class="timeline-date" datetime="2023-10" data-i18n="job3_date">Oct 2023 — Jan
+                                2024</time>
+                        </div>
+                        <ul class="timeline-details">
+                            <li data-i18n="job3_li1">Identified critical account errors, preventing legal exposure for
+                                multinational clients</li>
+                            <li data-i18n="job3_li2">Conducted comprehensive financial analysis and verification reports
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item animate">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 data-i18n="job4_title">Consulting Intern — Risk (TPRM)</h3>
+                                <span class="timeline-company" data-i18n="job4_company">Ernst &amp; Young · Málaga,
+                                    Spain</span>
+                            </div>
+                            <time class="timeline-date" datetime="2023-02" data-i18n="job4_date">Feb 2023 — May
+                                2023</time>
+                        </div>
+                        <ul class="timeline-details">
+                            <li data-i18n="job4_li1">Analysed reputational and financial risks for banking sector
+                                clients</li>
+                            <li data-i18n="job4_li2">Developed risk assessment frameworks for third-party technology
+                                providers</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ── Education ─────────────────────────────────── -->
+        <section id="education" class="section">
+            <div class="section-label" data-i18n="edu_label">Education</div>
+            <h2 class="section-title" data-i18n="edu_title">Academic background</h2>
+            <div class="edu-grid animate-stagger">
+                <div class="edu-card edu-card--featured">
+                    <div class="edu-badge" data-i18n="edu1_badge">Top Graduate 2019–2023</div>
+                    <span class="edu-year" data-i18n="edu1_year">2019 — 2023</span>
+                    <h3 data-i18n="edu1_degree">Bachelor of Business Administration</h3>
+                    <p class="edu-school" data-i18n="edu1_school">University of Málaga, Spain</p>
+                    <p class="edu-note" data-i18n-html="edu1_note">Extraordinary Award — Best graduate
+                        university-wide<br>Gauss Award — Highest performance in Statistics &amp; Econometrics</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-year" data-i18n="edu2_year">2022 — 2023</span>
+                    <h3 data-i18n="edu2_degree">Erasmus Exchange</h3>
+                    <p class="edu-school" data-i18n="edu2_school">University of Regensburg, Germany</p>
+                    <p class="edu-note" data-i18n="edu2_note">Corporate Sustainability · Business Psychology · European
+                        Economy</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-year" data-i18n="edu3_year">2024 — 2025</span>
+                    <h3 data-i18n="edu3_degree">Master in Business Intelligence</h3>
+                    <p class="edu-school" data-i18n="edu3_school">International University of La Rioja</p>
+                    <p class="edu-note" data-i18n="edu3_note">ML (R &amp; Python) · Advanced SQL · Power BI · Big Data
+                        analytics</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Contact ───────────────────────────────────── -->
+        <section id="contact" class="section contact">
+            <div class="section-label" data-i18n="contact_label">Contact</div>
+            <h2 class="contact-heading animate" data-i18n-html="contact_heading">Let's work<br>together</h2>
+            <p class="contact-intro animate" data-i18n-html="contact_intro">
+                Open to conversations about AI, data, and technology —<br>
+                new opportunities, collaborations, or just exchanging ideas.
+            </p>
+            <div class="contact-links animate">
+                <a href="mailto:gasparastorga13@gmail.com" class="contact-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"
+                        aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/gaspar-antonio-astorga-palma/" target="_blank"
+                    rel="noopener noreferrer" class="contact-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"
+                        aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/gaaprojects" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"
+                        aria-hidden="true">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span>© 2026 Gaspar Astorga</span>
+            <span data-i18n="footer_location">Mladá Boleslav, Czechia</span>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        // ── Translations ───────────────────────────────────────
+        const translations = {
+            en: {
+                nav_about: 'About', nav_experience: 'Experience', nav_education: 'Education', nav_contact: 'Contact',
+                toggle_theme: 'Toggle theme',
+                hero_location: 'Mladá Boleslav, Czechia',
+                hero_status: 'Open to new connections',
+                hero_role: 'AI Business Partner & Data Professional',
+                hero_bio: 'I build AI strategy and data solutions at the intersection of technology and business. Currently leading AI governance and automation at ŠKODA AUTO — turning complex challenges into measurable impact.',
+                hero_cta_contact: 'Get in touch', hero_cta_cv: 'Download CV',
+                about_label: 'About',
+                about_heading: 'Strategic technologist<br>with a technical core',
+                about_p1: 'I bridge the gap between engineering rigour and business strategy. With a background spanning financial auditing, enterprise consulting, and AI product development, I bring end-to-end perspective to complex problems.',
+                about_p2: 'At ŠKODA AUTO I define and execute AI strategy for Finance and Legal — from ideation through deployment — while architecting governance frameworks for EU AI Act compliance. Before that, I sharpened my analytical edge at KPMG and EY.',
+                about_p3: 'I graduated top of my class in Business Administration and hold a Master in Business Intelligence. My technical stack includes Python, R, SQL, and LangGraph — tools I use to create real outcomes, not for their own sake.',
+                card_role_label: 'Current role', card_role_value: 'AI Business Partner<br>Finance & Legal',
+                card_edu_label: 'Education', card_edu_value: 'MSc Business Intelligence', card_edu_sub: 'UNIR · Top Graduate UMA',
+                card_lang_label: 'Languages', card_lang_value: 'ES · EN · DE', card_lang_sub: 'Native · C1 · B2/C1',
+                card_focus_label: 'Focus areas', card_focus_value: 'AI Governance · ML Engineering · Data Analytics',
+                exp_label: 'Experience', exp_title: "Where I've worked",
+                job1_title: 'AI Business Partner — Finance & Legal', job1_company: 'ŠKODA AUTO · Mladá Boleslav, Czechia', job1_date: 'Jan 2026 — Present',
+                job1_li1: 'Define and execute comprehensive AI strategy for Finance and Legal functions',
+                job1_li2: 'Lead cross-functional AI initiatives from ideation through deployment',
+                job1_li3: 'Architect organisational AI governance frameworks covering EU AI Act compliance',
+                job1_li4: 'Drive automation of complex financial and legal workflows',
+                job2_title: 'Business Trainee — AI & Digitalization', job2_company: 'ŠKODA AUTO · Mladá Boleslav, Czechia', job2_date: 'Sept 2024 — Dec 2025',
+                job2_li1: 'Delivered AI-powered solutions for production optimisation',
+                job2_li2: 'Led external consulting teams in defining AI strategic architecture',
+                job2_li3: 'Assessed VW Group IT project portfolio (multi-million EUR budget)',
+                job2_li4: 'Managed data mapping initiatives as Data Steward',
+                job3_title: 'Financial Auditor', job3_company: 'KPMG · Málaga, Spain', job3_date: 'Oct 2023 — Jan 2024',
+                job3_li1: 'Identified critical account errors, preventing legal exposure for multinational clients',
+                job3_li2: 'Conducted comprehensive financial analysis and verification reports',
+                job4_title: 'Consulting Intern — Risk (TPRM)', job4_company: 'Ernst & Young · Málaga, Spain', job4_date: 'Feb 2023 — May 2023',
+                job4_li1: 'Analysed reputational and financial risks for banking sector clients',
+                job4_li2: 'Developed risk assessment frameworks for third-party technology providers',
+                edu_label: 'Education', edu_title: 'Academic background',
+                edu1_badge: 'Top Graduate 2019–2023', edu1_year: '2019 — 2023',
+                edu1_degree: 'Bachelor of Business Administration', edu1_school: 'University of Málaga, Spain',
+                edu1_note: 'Extraordinary Award — Best graduate university-wide<br>Gauss Award — Highest performance in Statistics & Econometrics',
+                edu2_year: '2022 — 2023', edu2_degree: 'Erasmus Exchange', edu2_school: 'University of Regensburg, Germany',
+                edu2_note: 'Corporate Sustainability · Business Psychology · European Economy',
+                edu3_year: '2024 — 2025', edu3_degree: 'Master in Business Intelligence', edu3_school: 'International University of La Rioja',
+                edu3_note: 'ML (R & Python) · Advanced SQL · Power BI · Big Data analytics',
+                contact_label: 'Contact', contact_heading: "Let's work<br>together",
+                contact_intro: 'Open to conversations about AI, data, and technology —<br>new opportunities, collaborations, or just exchanging ideas.',
+                footer_location: 'Mladá Boleslav, Czechia',
+            },
+            es: {
+                nav_about: 'Sobre mí', nav_experience: 'Experiencia', nav_education: 'Educación', nav_contact: 'Contacto',
+                toggle_theme: 'Cambiar tema',
+                hero_location: 'Mladá Boleslav, República Checa',
+                hero_status: 'Abierto a nuevas conexiones',
+                hero_role: 'Socio de Negocio de IA & Profesional de Datos',
+                hero_bio: 'Desarrollo estrategias de IA y soluciones de datos en la intersección entre tecnología y negocio. Actualmente liderando gobernanza de IA y automatización en ŠKODA AUTO — convirtiendo retos complejos en impacto medible.',
+                hero_cta_contact: 'Contactar', hero_cta_cv: 'Descargar CV',
+                about_label: 'Sobre mí',
+                about_heading: 'Tecnólogo estratégico<br>con base técnica sólida',
+                about_p1: 'Actúo como puente entre el rigor de la ingeniería y la estrategia empresarial. Con experiencia en auditoría financiera, consultoría empresarial y desarrollo de productos de IA, aporto una perspectiva integral a los problemas complejos.',
+                about_p2: 'En ŠKODA AUTO defino y ejecuto la estrategia de IA para Finanzas y Legal — desde la ideación hasta el despliegue — mientras diseño marcos de gobernanza para el cumplimiento de la Ley de IA de la UE. Anteriormente perfeccioné mi visión analítica en KPMG y EY.',
+                about_p3: 'Me gradué como mejor alumno en Administración de Empresas y poseo un Máster en Business Intelligence. Mi stack técnico incluye Python, R, SQL y LangGraph — herramientas que uso para crear resultados reales, no como fin en sí mismas.',
+                card_role_label: 'Rol actual', card_role_value: 'Socio de Negocio de IA<br>Finanzas y Legal',
+                card_edu_label: 'Educación', card_edu_value: 'Máster en Business Intelligence', card_edu_sub: 'UNIR · Premio Extraordinario UMA',
+                card_lang_label: 'Idiomas', card_lang_value: 'ES · EN · DE', card_lang_sub: 'Nativo · C1 · B2/C1',
+                card_focus_label: 'Áreas de enfoque', card_focus_value: 'Gobernanza IA · Ingeniería ML · Análisis de Datos',
+                exp_label: 'Experiencia', exp_title: 'Dónde he trabajado',
+                job1_title: 'Socio de Negocio de IA — Finanzas y Legal', job1_company: 'ŠKODA AUTO · Mladá Boleslav, República Checa', job1_date: 'Ene 2026 — Presente',
+                job1_li1: 'Definir y ejecutar la estrategia integral de IA para Finanzas y Legal',
+                job1_li2: 'Liderar iniciativas de IA multifuncionales desde la ideación hasta el despliegue',
+                job1_li3: 'Diseñar marcos de gobernanza de IA cubriendo el cumplimiento de la Ley de IA de la UE',
+                job1_li4: 'Impulsar la automatización de flujos de trabajo financieros y legales complejos',
+                job2_title: 'Trainee de Negocio — IA y Digitalización', job2_company: 'ŠKODA AUTO · Mladá Boleslav, República Checa', job2_date: 'Sept 2024 — Dic 2025',
+                job2_li1: 'Desarrollé soluciones basadas en IA para la optimización de la producción',
+                job2_li2: 'Lideré equipos consultores externos en la definición de arquitectura estratégica de IA',
+                job2_li3: 'Evalué el portfolio de proyectos IT del Grupo VW (presupuesto de varios millones de euros)',
+                job2_li4: 'Gestioné iniciativas de mapeo de datos como Data Steward',
+                job3_title: 'Auditor Financiero', job3_company: 'KPMG · Málaga, España', job3_date: 'Oct 2023 — Ene 2024',
+                job3_li1: 'Identifiqué errores críticos en cuentas, evitando exposición legal para clientes multinacionales',
+                job3_li2: 'Realicé análisis financieros exhaustivos e informes de verificación',
+                job4_title: 'Prácticas de Consultoría — Riesgo (TPRM)', job4_company: 'Ernst & Young · Málaga, España', job4_date: 'Feb 2023 — May 2023',
+                job4_li1: 'Analicé riesgos reputacionales y financieros para clientes del sector bancario',
+                job4_li2: 'Desarrollé marcos de evaluación de riesgos para proveedores de tecnología de terceros',
+                edu_label: 'Educación', edu_title: 'Formación académica',
+                edu1_badge: 'Premio Extraordinario 2019–2023', edu1_year: '2019 — 2023',
+                edu1_degree: 'Grado en Administración y Dirección de Empresas', edu1_school: 'Universidad de Málaga, España',
+                edu1_note: 'Premio Extraordinario — Mejor expediente universitario<br>Premio Gauss — Mejor rendimiento en Estadística y Econometría',
+                edu2_year: '2022 — 2023', edu2_degree: 'Intercambio Erasmus', edu2_school: 'Universidad de Regensburg, Alemania',
+                edu2_note: 'Sostenibilidad Corporativa · Psicología Empresarial · Economía Europea',
+                edu3_year: '2024 — 2025', edu3_degree: 'Máster en Business Intelligence', edu3_school: 'Universidad Internacional de La Rioja',
+                edu3_note: 'ML (R y Python) · SQL avanzado · Power BI · Analítica de Big Data',
+                contact_label: 'Contacto', contact_heading: 'Trabajemos<br>juntos',
+                contact_intro: 'Abierto a conversaciones sobre IA, datos y tecnología —<br>nuevas oportunidades, colaboraciones o simplemente intercambiar ideas.',
+                footer_location: 'Mladá Boleslav, República Checa',
+            },
+            de: {
+                nav_about: 'Über mich', nav_experience: 'Erfahrung', nav_education: 'Ausbildung', nav_contact: 'Kontakt',
+                toggle_theme: 'Design wechseln',
+                hero_location: 'Mladá Boleslav, Tschechien',
+                hero_status: 'Offen für neue Kontakte',
+                hero_role: 'KI-Business Partner & Datenspezialist',
+                hero_bio: 'Ich entwickle KI-Strategien und Datenlösungen an der Schnittstelle von Technologie und Wirtschaft. Derzeit leite ich KI-Governance und Automatisierung bei ŠKODA AUTO — komplexe Herausforderungen in messbare Wirkung verwandeln.',
+                hero_cta_contact: 'Kontakt aufnehmen', hero_cta_cv: 'Lebenslauf herunterladen',
+                about_label: 'Über mich',
+                about_heading: 'Strategischer Technologe<br>mit technischem Kern',
+                about_p1: 'Ich überbrücke die Lücke zwischen technischer Präzision und Geschäftsstrategie. Mit Erfahrung in Wirtschaftsprüfung, Unternehmensberatung und KI-Produktentwicklung bringe ich eine ganzheitliche Perspektive auf komplexe Probleme.',
+                about_p2: 'Bei ŠKODA AUTO definiere und setze ich die KI-Strategie für Finanzen und Recht um — von der Ideenfindung bis zur Implementierung — und entwickle Governance-Rahmenwerke für den EU AI Act. Zuvor schärfte ich meinen analytischen Blick bei KPMG und EY.',
+                about_p3: 'Ich schloss mein BWL-Studium als Jahrgangsbester ab und besitze einen Master in Business Intelligence. Mein technisches Stack umfasst Python, R, SQL und LangGraph — Werkzeuge für echte Ergebnisse, kein Selbstzweck.',
+                card_role_label: 'Aktuelle Position', card_role_value: 'KI-Business Partner<br>Finanzen & Recht',
+                card_edu_label: 'Ausbildung', card_edu_value: 'MSc Business Intelligence', card_edu_sub: 'UNIR · Jahrgangsbester UMA',
+                card_lang_label: 'Sprachen', card_lang_value: 'ES · EN · DE', card_lang_sub: 'Muttersprache · C1 · B2/C1',
+                card_focus_label: 'Schwerpunkte', card_focus_value: 'KI-Governance · ML-Engineering · Datenanalyse',
+                exp_label: 'Erfahrung', exp_title: 'Wo ich gearbeitet habe',
+                job1_title: 'KI-Business Partner — Finanzen & Recht', job1_company: 'ŠKODA AUTO · Mladá Boleslav, Tschechien', job1_date: 'Jan 2026 — Heute',
+                job1_li1: 'Definition und Umsetzung einer umfassenden KI-Strategie für Finanzen und Recht',
+                job1_li2: 'Leitung bereichsübergreifender KI-Initiativen von der Konzeption bis zur Umsetzung',
+                job1_li3: 'Entwicklung organisatorischer KI-Governance-Rahmenwerke gemäß EU AI Act',
+                job1_li4: 'Automatisierung komplexer Finanz- und Rechtsworkflows',
+                job2_title: 'Business Trainee — KI & Digitalisierung', job2_company: 'ŠKODA AUTO · Mladá Boleslav, Tschechien', job2_date: 'Sept 2024 — Dez 2025',
+                job2_li1: 'KI-gestützte Lösungen zur Produktionsoptimierung entwickelt',
+                job2_li2: 'Externe Beratungsteams bei der KI-Strategieentwicklung geleitet',
+                job2_li3: 'IT-Projektportfolio der VW-Gruppe bewertet (Budget im mehrstelligen Millionenbereich)',
+                job2_li4: 'Datenmapping-Initiativen als Data Steward koordiniert',
+                job3_title: 'Wirtschaftsprüfer', job3_company: 'KPMG · Málaga, Spanien', job3_date: 'Okt 2023 — Jan 2024',
+                job3_li1: 'Kritische Buchungsfehler identifiziert und rechtliche Risiken für multinationale Kunden verhindert',
+                job3_li2: 'Umfassende Finanzanalysen und Prüfberichte erstellt',
+                job4_title: 'Praktikant Beratung — Risiko (TPRM)', job4_company: 'Ernst & Young · Málaga, Spanien', job4_date: 'Feb 2023 — Mai 2023',
+                job4_li1: 'Reputations- und Finanzrisiken für Kunden im Bankensektor analysiert',
+                job4_li2: 'Risikobewertungsrahmen für Drittanbieter von Technologiedienstleistungen entwickelt',
+                edu_label: 'Ausbildung', edu_title: 'Akademischer Hintergrund',
+                edu1_badge: 'Jahrgangsbester 2019–2023', edu1_year: '2019 — 2023',
+                edu1_degree: 'Bachelor of Business Administration', edu1_school: 'Universität Málaga, Spanien',
+                edu1_note: 'Außerordentliche Auszeichnung — Bester Absolvent der Universität<br>Gauss-Preis — Beste Leistung in Statistik & Ökonometrie',
+                edu2_year: '2022 — 2023', edu2_degree: 'Erasmus-Austausch', edu2_school: 'Universität Regensburg, Deutschland',
+                edu2_note: 'Corporate Sustainability · Wirtschaftspsychologie · Europäische Wirtschaft',
+                edu3_year: '2024 — 2025', edu3_degree: 'Master in Business Intelligence', edu3_school: 'Internationale Universität La Rioja',
+                edu3_note: 'ML (R & Python) · Fortgeschrittenes SQL · Power BI · Big-Data-Analyse',
+                contact_label: 'Kontakt', contact_heading: 'Lass uns zusammen<br>arbeiten',
+                contact_intro: 'Offen für Gespräche über KI, Daten und Technologie —<br>neue Chancen, Kooperationen oder einfach den Austausch von Ideen.',
+                footer_location: 'Mladá Boleslav, Tschechien',
+            }
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+        let currentLang = 'en';
 
-        document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
-            observer.observe(el);
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            const t = translations[lang];
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (t[key] !== undefined) el.textContent = t[key];
+            });
+
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.dataset.i18nHtml;
+                if (t[key] !== undefined) el.innerHTML = t[key];
+            });
+
+            // Update lang chips active state
+            document.querySelectorAll('.lang-chip').forEach(chip => {
+                const isActive = chip.dataset.lang === lang;
+                chip.classList.toggle('active', isActive);
+                chip.setAttribute('aria-pressed', isActive);
+            });
+
+            document.documentElement.lang = lang;
+            localStorage.setItem('lang', lang);
+        }
+
+        // ── Theme ─────────────────────────────────────────────
+        const html = document.documentElement;
+        const themeBtn = document.getElementById('themeToggle');
+        const themeBtnMobile = document.getElementById('themeToggleMobile');
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        html.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+
+        function toggleTheme() {
+            const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+            html.dataset.theme = next;
+            localStorage.setItem('theme', next);
+        }
+
+        themeBtn.addEventListener('click', toggleTheme);
+        themeBtnMobile.addEventListener('click', toggleTheme);
+
+        // ── Mobile menu ───────────────────────────────────────
+        const navToggle = document.getElementById('navToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backdrop = document.getElementById('navBackdrop');
+
+        function openMenu() {
+            mobileMenu.classList.add('open');
+            backdrop.classList.add('open');
+            navToggle.setAttribute('aria-expanded', 'true');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            backdrop.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        navToggle.addEventListener('click', () => {
+            navToggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
         });
+
+        backdrop.addEventListener('click', closeMenu);
+
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+        // Close on Escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+        });
+
+        // ── Nav scroll state ──────────────────────────────────
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 32);
+        }, { passive: true });
+
+        // ── Language chips ────────────────────────────────────
+        document.querySelectorAll('.lang-chip').forEach(chip => {
+            chip.addEventListener('click', () => setLanguage(chip.dataset.lang));
+        });
+
+        // ── Scroll animations ─────────────────────────────────
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (reduced) {
+            document.querySelectorAll('.animate, .animate-stagger').forEach(el => el.classList.add('visible'));
+        } else {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.animate, .animate-stagger').forEach(el => io.observe(el));
+        }
+
+        // ── Init language ─────────────────────────────────────
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang && translations[savedLang]) setLanguage(savedLang);
     </script>
 </body>
 
